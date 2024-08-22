@@ -26,21 +26,33 @@
             width: 32px;
             display: grid;
             place-items: center;
-            color: #f7f1f1;
+        }
+        .tg-animation{
+            animation-name: XYZ;
+            animation-duration: 350ms;
+            animation-timing-function: linear;
+        }
+        @keyframes XYZ {
+            0%{
+                transform: translateX(15rem);
+            }
+            100%{
+                transform: translateX(0);
+            }
         }
     </style>
 </head>
 <body class="Manrope-font">
-    <header class="container mx-auto">
+    <header class="container mx-auto mb-[6rem] max-sm:px-[1rem]">
         <!-- Main-Navber -->
-         <nav class="flex items-center justify-between px-[1.4rem] mt-[2rem] ">
+         <nav class="flex items-center justify-between px-[1.4rem] mt-[2rem] mb-[3rem] relative">
         <!-- Hero logo -->
             <div class="flex items-center space-x-[10px] cursor-pointer">
                 <i class="fa-solid logo-arrow fa-circle-arrow-up text-[32px] bg-[black] text-[#ABEF5F] rotate-[35deg]"></i>
                 <h1 class="font-bold text-[2rem] text-[#212121]">Rinterio</h1> 
             </div>
         <!-- Navigatios for lg screeen -->
-            <ul class="flex items-center space-x-[1.5rem] text-[#737373] max-md:hidden">
+            <ul class="flex items-center space-x-[1.5rem] text-[#737373] max-lg:hidden">
                 <li><a href="#" class="hover:text-[#2c2c2c] font-bold text-[1rem]">Home</a></li>
                 <li><a href="#" class="hover:text-[#2c2c2c] font-bold text-[1rem]">Services</a></li>
                 <li><a href="#" class="hover:text-[#2c2c2c] font-bold text-[1rem]">Portfolio</a></li>
@@ -48,35 +60,49 @@
                 <li><a href="#" class="hover:text-[#2c2c2c] font-bold text-[1rem]">Contact Us</a></li>
             </ul>
         <!-- Navigatios for mobile screeen -->
-            <ul class="hidden" id="mobile-nav">
-                <li><a href="#" class="hover:text-[#2c2c2c] font-bold text-[1rem]">Home</a></li>
-                <li><a href="#" class="hover:text-[#2c2c2c] font-bold text-[1rem]">Services</a></li>
-                <li><a href="#" class="hover:text-[#2c2c2c] font-bold text-[1rem]">Portfolio</a></li>
-                <li><a href="#" class="hover:text-[#2c2c2c] font-bold text-[1rem]">Portfolio</a></li>
-                <li><a href="#" class="hover:text-[#2c2c2c] font-bold text-[1rem]">Contact Us</a></li>
-            </ul>
+            <div class="tg-animation flex flex-col hidden absolute w-[11rem] px-[1rem] py-[0.6rem] right-0 bg-[#cfcbcb] rounded-tl-lg rounded-bl-lg top-[0.8rem]" id="mobile-nav">
+                <i class="fa-solid fa-xmark cursor-pointer mb-[1rem] bg-[#f7f1f1] grid place-items-center h-[2rem] w-[2rem] text-[1.5rem] rounded-full" id="cross-icon" onclick="closeBtn()"></i>
+                <hr>
+                <ul>
+                    <li class="w-full"><a href="#" class="hover:text-[#2c2c2c] font-bold text-[1rem] block w-[full] mb-[0.4rem] py-[0.3rem] active:text-[gray]">Home</a></li>
+                    <li class="w-full"><a href="#" class="hover:text-[#2c2c2c] font-bold text-[1rem] block w-[full] mb-[0.4rem] py-[0.3rem] active:text-[gray]">Services</a></li>
+                    <li class="w-full"><a href="#" class="hover:text-[#2c2c2c] font-bold text-[1rem] block w-[full] mb-[0.4rem] py-[0.3rem] active:text-[gray]">Portfolio</a></li>
+                    <li class="w-full"><a href="#" class="hover:text-[#2c2c2c] font-bold text-[1rem] block w-[full] mb-[0.4rem] py-[0.3rem] active:text-[gray]">Portfolio</a></li>
+                    <li class="w-full"><a href="#" class="hover:text-[#2c2c2c] font-bold text-[1rem] block w-[full] mb-[0.4rem] py-[0.3rem] active:text-[gray]">Contact Us</a></li>
+                </ul>
+            </div>
             <!-- End of nav -->
              <div class="flex items-center space-x-[1.5rem] max-md:hidden">
                 <i class="fa-solid grid place-items-center rounded-full fa-magnifying-glass text-[#737373] text-[1.2rem] hover:bg-[#e4e2e2] cursor-pointer h-[2.5rem] w-[2.5rem]"></i>
                 <i class="fa-solid grid place-items-center rounded-full fa-cart-shopping text-[#737373] text-[1.2rem] hover:bg-[#e4e2e2] cursor-pointer h-[2.5rem] w-[2.5rem]"></i>
                 <button class="flex items-center justify-center space-x-[10px] btn bg-[#ABEF5F] hover:bg-[#c3fa85] h-[3rem] rounded-[1.5rem] font-bold text-[1.25rem] text-[#1C1C1C]">Book Consult<i class="fa-solid fa-circle-arrow-up text-[27px] text-[#1C1C1C] rotate-[35deg]"></i></button>
              </div>
-             <i class="fa-solid fa-bars md:hidden text-[1.7rem] h-[3rem] w-[3rem] bg-[#f7f1f1] rounded-full grid place-items-center" onclick="getNav()"></i>
+             <i class="fa-solid fa-bars lg:hidden text-[#737373] bg-[#FFFFFF] text-[1.7rem] h-[3rem] w-[3rem] bg-[#f7f1f1] rounded-full grid place-items-center" id="hamberger" onclick="getNav()"></i>
          </nav>
+         <div>
+            <img src="assets/banner.png" alt="Loading" class="h-[auto] w-[auto] mb-[1.5rem] mx-auto">
+            <div class="lg:max-w-[50rem] mx-auto">
+                <h1 class="text-[2.8rem] lg:[word-spacing:0.4rem] mb-[1.5rem] text-center text-[#212121] font-extrabold">A barn house of this design has a striking appearance</h1>
+                <p class="font-normal text-center text-[1rem] text-wrap text-[#494949] mb-[2rem]">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents, and large windows that flood the space with natural light.</p>
+                <button class="text-[1.25rem] bg-[#caeea1] h-[3.5rem] rounded-[1.75rem] w-[12.8rem] font-bold flex flex-row items-center hover:bg-[#d7f1b8] justify-center ml-[50%] translate-x-[-50%] text-[#212121] mr-[1rem]">View Details<i class="fa-solid logo-arrow fa-circle-arrow-up text-[32px] bg-[black] ml-[0.7rem] text-[#ABEF5F] rotate-[35deg]"></i></button>
+            </div>
+         </div>
     </header>
     <main></main>
     <footer></footer>
     <script>
-        let a = 0;
+        // nav functionallyty
         function getNav(){
-            if(a === 0){
-                document.getElementById('mobile-nav').style.display = 'block';
-                a = 1;
-            }else{
-                document.getElementById('mobile-nav').style.display = 'none';
-                a = 0
-            }
+            document.getElementById('mobile-nav').style.display = 'block';
+            document.getElementById('hamberger').style.display = 'none';
         }
+        function closeBtn(){
+            document.getElementById('mobile-nav').style.display = 'none';
+            document.getElementById('hamberger').style.display = 'block';
+            document.getElementById('hamberger').style.display = 'grid';
+            document.getElementById('hamberger').style.placeItems = 'center';
+        }
+
     </script>
 </body>
 </html>
