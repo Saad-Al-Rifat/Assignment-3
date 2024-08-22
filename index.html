@@ -4,8 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment 3</title>
+    <!-- Favicon -->
+     <link rel="shortcut icon" href="assets/house-chimney-solid.svg" type="image/x-icon">
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <!-- Font awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Tailwind & Daisy UI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Internal stylesheet -->
+    <style>
+        .Manrope-font{
+            font-family: "Manrope", sans-serif;
+        }
+        .logo-arrow{
+            border-radius: 50%;
+            height: 32px;
+            width: 32px;
+            display: grid;
+            place-items: center;
+            color: #2c2c2c;
+        }
+    </style>
 </head>
-<body>
-    <h1>hello world</h1>
+<body class="Manrope-font">
+    <header class="container mx-auto">
+        <!-- Main-Navber -->
+         <nav class="flex items-center justify-between px-[1.4rem] mt-[2rem] ">
+        <!-- Hero logo -->
+            <div class="flex items-center space-x-[10px] cursor-pointer">
+                <i class="fa-solid logo-arrow fa-circle-arrow-up text-[32px] bg-[black] text-[#ABEF5F] rotate-[35deg]"></i>
+                <h1 class="font-bold text-[2rem] text-[#212121]">Rinterio</h1> 
+            </div>
+        <!-- Navigatios for lg screeen -->
+            <ul class="flex items-center space-x-[1.5rem] text-[#737373] max-md:hidden">
+                <li><a href="#" class="hover:text-[#2c2c2c] font-bold text-[1rem]">Home</a></li>
+                <li><a href="#" class="hover:text-[#2c2c2c] font-bold text-[1rem]">Services</a></li>
+                <li><a href="#" class="hover:text-[#2c2c2c] font-bold text-[1rem]">Portfolio</a></li>
+                <li><a href="#" class="hover:text-[#2c2c2c] font-bold text-[1rem]">Portfolio</a></li>
+                <li><a href="#" class="hover:text-[#2c2c2c] font-bold text-[1rem]">Contact Us</a></li>
+            </ul>
+        <!-- Navigatios for mobile screeen -->
+            <ul class="hidden">
+                <li><a href="#" class="hover:text-[#2c2c2c] font-bold text-[1rem]">Home</a></li>
+                <li><a href="#" class="hover:text-[#2c2c2c] font-bold text-[1rem]">Services</a></li>
+                <li><a href="#" class="hover:text-[#2c2c2c] font-bold text-[1rem]">Portfolio</a></li>
+                <li><a href="#" class="hover:text-[#2c2c2c] font-bold text-[1rem]">Portfolio</a></li>
+                <li><a href="#" class="hover:text-[#2c2c2c] font-bold text-[1rem]">Contact Us</a></li>
+            </ul>
+            <!-- End of nav -->
+             <div class="flex items-center space-x-[1.5rem] max-md:hidden">
+                <i class="fa-solid grid place-items-center rounded-full fa-magnifying-glass text-[#737373] text-[1.2rem] hover:bg-[#e4e2e2] cursor-pointer h-[2.5rem] w-[2.5rem]"></i>
+                <i class="fa-solid grid place-items-center rounded-full fa-cart-shopping text-[#737373] text-[1.2rem] hover:bg-[#e4e2e2] cursor-pointer h-[2.5rem] w-[2.5rem]"></i>
+                <button class="flex items-center justify-center space-x-[10px] btn bg-[#ABEF5F] hover:bg-[#c3fa85] h-[3rem] rounded-[1.5rem] font-bold text-[1.25rem] text-[#1C1C1C]">Book Consult<i class="fa-solid fa-circle-arrow-up text-[27px] text-[#1C1C1C] rotate-[35deg]"></i></button>
+             </div>
+             <i class="fa-solid fa-bars md:hidden text-[]"></i>
+         </nav>
+    </header>
+    <main></main>
+    <footer></footer>
 </body>
 </html>
