@@ -60,7 +60,7 @@
                 <li><a href="#" class="hover:text-[#2c2c2c] font-bold text-[1rem]">Contact Us</a></li>
             </ul>
         <!-- Navigatios for mobile screeen -->
-            <div class="tg-animation flex flex-col hidden absolute w-[11rem] px-[1rem] py-[0.6rem] right-0 bg-[#cfcbcb] rounded-tl-lg rounded-bl-lg top-[0.8rem]" id="mobile-nav">
+            <div class="tg-animation flex flex-col z-10 hidden absolute min-w-[11rem] px-[1rem] py-[0.6rem] right-0 bg-[#cfcbcb] rounded-tl-lg rounded-bl-lg top-[0.8rem]" id="mobile-nav">
                 <i class="fa-solid fa-xmark cursor-pointer mb-[1rem] bg-[#f7f1f1] grid place-items-center h-[2rem] w-[2rem] text-[1.5rem] rounded-full" id="cross-icon" onclick="closeBtn()"></i>
                 <hr>
                 <ul>
@@ -77,21 +77,78 @@
                 <i class="fa-solid grid place-items-center rounded-full fa-cart-shopping text-[#737373] text-[1.2rem] hover:bg-[#e4e2e2] cursor-pointer h-[2.5rem] w-[2.5rem]"></i>
                 <button class="flex items-center justify-center space-x-[10px] btn bg-[#ABEF5F] hover:bg-[#c3fa85] h-[3rem] rounded-[1.5rem] font-bold text-[1.25rem] text-[#1C1C1C]">Book Consult<i class="fa-solid fa-circle-arrow-up text-[27px] text-[#1C1C1C] rotate-[35deg]"></i></button>
              </div>
-             <i class="fa-solid fa-bars lg:hidden text-[#737373] bg-[#FFFFFF] text-[1.7rem] h-[3rem] w-[3rem] bg-[#f7f1f1] rounded-full grid place-items-center" id="hamberger" onclick="getNav()"></i>
+             <i class="fa-solid fa-bars lg:hidden  text-[#737373] bg-[#FFFFFF] text-[1.7rem] h-[3rem] w-[3rem] bg-[#f7f1f1] rounded-full grid place-items-center" id="hamberger" onclick="getNav()"></i>
          </nav>
          <div>
             <img src="assets/banner.png" alt="Loading" class="h-[auto] w-[auto] mb-[1.5rem] mx-auto">
             <div class="lg:max-w-[50rem] mx-auto">
                 <h1 class="text-[2.8rem] lg:[word-spacing:0.4rem] mb-[1.5rem] text-center text-[#212121] font-extrabold">A barn house of this design has a striking appearance</h1>
                 <p class="font-normal text-center text-[1rem] text-wrap text-[#494949] mb-[2rem]">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents, and large windows that flood the space with natural light.</p>
-                <button class="text-[1.25rem] bg-[#caeea1] h-[3.5rem] rounded-[1.75rem] w-[12.8rem] font-bold flex flex-row items-center hover:bg-[#d7f1b8] justify-center ml-[50%] translate-x-[-50%] text-[#212121] mr-[1rem]">View Details<i class="fa-solid logo-arrow fa-circle-arrow-up text-[32px] bg-[black] ml-[0.7rem] text-[#ABEF5F] rotate-[35deg]"></i></button>
+                <button class="text-[1.25rem]  bg-[#caeea1] h-[3.5rem] rounded-[1.75rem] w-[12.8rem] font-bold flex flex-row items-center hover:bg-[#d7f1b8] justify-center ml-[50%] translate-x-[-50%] text-[#212121] mr-[1rem]">View Details<i class="fa-solid logo-arrow fa-circle-arrow-up text-[32px] bg-[black] ml-[0.7rem] text-[#ABEF5F] rotate-[35deg]"></i></button>
             </div>
          </div>
     </header>
-    <main></main>
+    <main>
+        <section class="bg-[#f1f1f1]">
+            <section class="flex-col flex lg:flex-row justify-center pt-[2rem] lg:pt-[5rem] space-x-[2rem] mb-[3.4rem] relative">
+                <img src="assets/Vector.png" class="absolute sm:hidden h-auto w-[6rem] rotate-[7deg] translate-x-[-34rem] translate-y-[-2.9rem]">
+                <div class="lg:w-[34.9rem] min-w-[20.9rem] mb-[1rem]">
+                    <div class="mb-[1.8rem] ">
+                        <button class="flex flex-row hover:bg-[#D9D9D9] items-center text-[#494949] bg-[#FFFFFF] rounded-[4rem] font-bold text-[1rem] h-[2.3rem] w-[8rem]"><i class="fa-solid logo-arrow hover:text-[#D9D9D9] fa-circle-arrow-up text-[32px] bg-[#494949] text-[white] rotate-[90deg]"></i>About Us</button>
+                        <h1 class="mb-[1.3rem] text-[2.5rem] text-[#212121] font-extrabold">We design thoughtful, liveable spaces</h1>
+                        <p  class="text-[1rem] text-[#494949] font-normal">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents.</p>
+                    </div>
+                    <div class="lg:space-y-[1.5rem] lg:flex-col max-sm:flex-col max-sm:space-y-[1.5rem] flex md:flex-row max-md:items-center sm:gap-[1.4rem] sm:justify-center">
+                        <div class="flex flex-row items-center p-[1rem] rounded-[16px] bg-[#FFFFFF] space-x-[1.5rem]">
+                            <img src="assets/commercial.png" alt="Loading" class="h-[64px] w-[64px]" >
+                            <div class="w-[19rem]">
+                                <h2 class="text-[#494949] mb-[0.3rem] font-extrabold text-[1.25rem]">Commercial</h2>
+                                <p  class="text-[#494949] font-normal text-[1rem]">The barn house captivates with its blend of rustic charm and modern.</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-row items-center p-[1rem] rounded-[16px] bg-[#FFFFFF] space-x-[1.5rem]">
+                            <img src="assets/residential.png" alt="Loading" class="h-[64px] w-[64px]">
+                            <div class="w-[19rem]">
+                                <h2 class="text-[#494949] mb-[0.3rem] font-extrabold text-[1.25rem]">Commercial</h2>
+                                <p  class="text-[#494949] font-normal text-[1rem]">The barn house captivates with its blend of rustic charm and modern.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="assets/Rectangle.png" alt="Loading" class="h-[auto] w-[auto]">
+                </div>
+            </section>
+            <section class="p-[2rem] max-lg:w-[45rem] max-sm:w-[17rem] lg:w-[73rem] max-sm:space-y-[2rem] rounded-2xl bg-[#FFFFFF] block mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[1.5rem]">
+                <div class="space-y-[0.3rem] rounded-[16px]">
+                    <i class="fa-regular fa-envelope text-[2.5rem] ml-[50%] translate-x-[-50%]"></i>
+                    <p class="text-[#494949] text-[2rem] font-bold text-center">254+</p>
+                    <p class="text-[#737373] text-[1rem] font-semibold text-center">Happy Client Review</p>
+                </div>
+                <div class="space-y-[0.3rem] rounded-[16px]">
+                    <i class="fa-regular fa-building text-[2.5rem] ml-[50%] translate-x-[-50%]"></i>
+                    <p class="text-[#494949] text-[2rem] font-bold text-center">254+</p>
+                    <p class="text-[#737373] text-[1rem] font-semibold text-center">Happy Client Review</p>
+                </div>
+                <div class="space-y-[0.3rem] rounded-[16px]">
+                    <i class="fa-solid fa-people-group text-[2.5rem] ml-[50%] translate-x-[-50%]"></i>
+                    <p class="text-[#494949] text-[2rem] font-bold text-center">254+</p>
+                    <p class="text-[#737373] text-[1rem] font-semibold text-center">Happy Client Review</p>
+                </div>
+                <div class="space-y-[0.3rem] rounded-[16px]">
+                    <i class="fa-solid fa-user-group text-[2.5rem] ml-[50%] translate-x-[-50%]"></i>
+                    <p class="text-[#494949] text-[2rem] font-bold text-center">254+</p>
+                    <p class="text-[#737373] text-[1rem] font-semibold text-center">Happy Client Review</p>
+                </div>
+            </section>
+            <section>
+                
+            </section>
+        </section>
+    </main>
     <footer></footer>
     <script>
-        // nav functionallyty
+        // nav functionalyty
         function getNav(){
             document.getElementById('mobile-nav').style.display = 'block';
             document.getElementById('hamberger').style.display = 'none';
