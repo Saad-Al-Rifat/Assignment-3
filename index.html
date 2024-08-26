@@ -60,24 +60,29 @@
                 <li><a href="#" class="hover:text-[#2c2c2c] font-bold text-[1rem]">Contact Us</a></li>
             </ul>
         <!-- Navigatios for mobile screeen -->
-            <div class="tg-animation flex flex-col z-10 hidden absolute w-[9rem] translate-x-[1rem] px-[1rem] py-[0.6rem] right-0 bg-[#cfcbcb] rounded-tl-lg rounded-bl-lg top-[0.8rem]" id="mobile-nav">
-                <i class="fa-solid fa-xmark cursor-pointer mb-[1rem] bg-[#f7f1f1] grid place-items-center h-[2rem] w-[2rem] text-[1.5rem] rounded-full" id="cross-icon" onclick="closeBtn()"></i>
-                <hr>
-                <ul>
-                    <li class="w-full"><a href="#" class="hover:text-[#2c2c2c] font-bold text-[1rem] block w-[full] mb-[0.4rem] py-[0.3rem] active:text-[gray]">Home</a></li>
-                    <li class="w-full"><a href="#" class="hover:text-[#2c2c2c] font-bold text-[1rem] block w-[full] mb-[0.4rem] py-[0.3rem] active:text-[gray]">Services</a></li>
-                    <li class="w-full"><a href="#" class="hover:text-[#2c2c2c] font-bold text-[1rem] block w-[full] mb-[0.4rem] py-[0.3rem] active:text-[gray]">Portfolio</a></li>
-                    <li class="w-full"><a href="#" class="hover:text-[#2c2c2c] font-bold text-[1rem] block w-[full] mb-[0.4rem] py-[0.3rem] active:text-[gray]">Portfolio</a></li>
-                    <li class="w-full"><a href="#" class="hover:text-[#2c2c2c] font-bold text-[1rem] block w-[full] mb-[0.4rem] py-[0.3rem] active:text-[gray]">Contact Us</a></li>
-                </ul>
+        <div class="drawer drawer-end hidden max-lg:block z-50">
+            <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
+            <div class="drawer-content">
+              <!-- Page content here -->
+              <label for="my-drawer-4" class="drawer-button btn-primary absolute translate-y-[-1.5rem] right-[1rem] md:cursor-pointer"><i class="md:hover:bg-[#A0A0A0] md:active:bg-[lightgray] fa-solid fa-bars lg:hidden  text-[#737373] bg-[#FFFFFF] text-[1.7rem] h-[3rem] w-[3rem] bg-[#f7f1f1] rounded-full grid place-items-center" id="hamberger" onclick="getNav()"></i></label>
             </div>
+            <div class="drawer-side">
+              <label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay"></label>
+              <ul class="menu bg-base-200 text-base-content min-h-full w-80 p-4">
+                <li><a href="#" class="hover:text-[#2c2c2c] font-bold text-[1rem]">Home</a></li>
+                <li><a href="#" class="hover:text-[#2c2c2c] font-bold text-[1rem]">Services</a></li>
+                <li><a href="#" class="hover:text-[#2c2c2c] font-bold text-[1rem]">Portfolio</a></li>
+                <li><a href="#" class="hover:text-[#2c2c2c] font-bold text-[1rem]">Portfolio</a></li>
+                <li><a href="#" class="hover:text-[#2c2c2c] font-bold text-[1rem]">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
             <!-- End of nav -->
              <div class="flex items-center space-x-[1.5rem] max-md:hidden">
                 <i class="fa-solid grid place-items-center rounded-full fa-magnifying-glass text-[#737373] text-[1.2rem] hover:bg-[#e4e2e2] cursor-pointer h-[2.5rem] w-[2.5rem]"></i>
                 <i class="fa-solid grid place-items-center rounded-full fa-cart-shopping text-[#737373] text-[1.2rem] hover:bg-[#e4e2e2] cursor-pointer h-[2.5rem] w-[2.5rem]"></i>
                 <button class="flex items-center justify-center space-x-[10px] btn bg-[#ABEF5F] hover:bg-[#c3fa85] h-[3rem] rounded-[1.5rem] font-bold text-[1.25rem] text-[#1C1C1C]">Book Consult<i class="fa-solid fa-circle-arrow-up text-[27px] text-[#1C1C1C] rotate-[35deg]"></i></button>
              </div>
-             <i class="fa-solid fa-bars lg:hidden  text-[#737373] bg-[#FFFFFF] text-[1.7rem] h-[3rem] w-[3rem] bg-[#f7f1f1] rounded-full grid place-items-center" id="hamberger" onclick="getNav()"></i>
          </nav>
          <div>
             <img src="assets/banner.png" alt="Loading" class="h-[auto] w-[auto] mb-[1.5rem] mx-auto">
@@ -211,6 +216,9 @@
                 </div>
             </div>
         </section>
+        <section id="Unic-layer" class="h-[3rem] w-[3rem] bg-[red]">
+
+        </section>
         <section class="bg-[#D9D9D9] p-[4rem]">
             <div class="space-y-[0.5rem] lg:w-[42rem] lg:mx-auto mb-[5rem]">
                 <button class="bg-[#cfecae] text-[#494949] text-[1rem] font-bold flex flex-row items-center justify-center rounded-[1.15rem] w-[12rem] h-[2.3rem] gap-x-[0.5rem] mx-auto"><i class="fa-solid fa-arrow-right"></i>Rinterio News</button>
@@ -295,19 +303,5 @@
             <button class="h-[3.5rem] lg:hover:bg-[#baf17b] lg:active:bg-[#9ed65e] rounded-[1.75rem] mx-auto w-[20.6rem] bg-[#ABEF5F] text-[#1C1C1C] text-[1.25rem] font-bold flex flex-row items-center justify-center gap-x-[0.5rem]">Book Consult<i class="fa-solid fa-arrow-up ml-[0.5rem] w-[2rem] h-[2rem] rounded-full bg-[#1C1C1C] rotate-[45deg] text-white grid place-items-center text-[1.3rem]"></i></button>
         </div>
     </footer>
-    <script>
-        // nav functionalyty
-        function getNav(){
-            document.getElementById('mobile-nav').style.display = 'block';
-            document.getElementById('hamberger').style.display = 'none';
-        }
-        function closeBtn(){
-            document.getElementById('mobile-nav').style.display = 'none';
-            document.getElementById('hamberger').style.display = 'block';
-            document.getElementById('hamberger').style.display = 'grid';
-            document.getElementById('hamberger').style.placeItems = 'center';
-        }
-
-    </script>
 </body>
 </html>
